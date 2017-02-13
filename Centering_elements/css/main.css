@@ -1,0 +1,136 @@
+*{
+	box-sizing: border-box;
+}
+h1, h3, p{
+	text-align: center;
+	color: grey;
+}
+
+
+/*Method 1*/
+.parent-m1{
+	width: 100%;
+	min-height: 200px;
+	background-color: grey;
+	border: 20px solid #ccc;
+	padding: 20px;
+	margin-bottom: 20px;
+}
+.child-m1{
+	width: 300px;
+	min-height: 100px;
+	background-color: blue;
+	margin: 0 auto;
+}
+
+/*Method 2*/
+.parent-m2{
+	width: 100%;
+	min-height: 200px;
+	background-color: grey;
+	border: 20px solid #ccc;
+	padding: 20px;
+	margin-bottom: 20px;
+	font-size: 0;
+}
+.parent-m2>div{
+	width: 50%;
+	font-size: 16px;
+	color: white;
+	display: inline-block;
+	vertical-align: top;
+}
+.child-m2-first{
+	background-color: blue;
+}
+.child-m2-second{
+	background-color: green;
+}
+
+/*method 3*/
+.parent-m3{
+	width: 100%;
+	min-height: 200px;
+	background-color: grey;
+	border: 20px solid #ccc;
+	padding: 20px;
+	margin-bottom: 20px;
+	position: relative;
+}
+.child-m3{
+	width: 300px;
+	height: 100px;
+	background-color: blue;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -50px; /*100px/2*/
+	margin-left: -150px; /*300px/2*/
+
+}
+
+/*method 4*/
+.parent-m4{
+	width: 100%;
+	min-height: 200px;
+	background-color: grey;
+	border: 20px solid #ccc;
+	padding: 20px;
+	margin-bottom: 20px;
+	position: relative;
+}
+.child-m4{
+	width: 300px;
+	height: 100px;
+	background-color: blue;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	margin: auto;
+}
+
+
+/*method 5*/
+.parent-m5{
+	width: 100%;
+	height: 200px;
+	background-color: grey;
+	border: 20px solid #ccc;
+	margin-bottom: 20px;
+	color: white;
+	text-align: center;
+}
+.parent-m5:before{
+	content: "";
+	display: inline-block;
+	height: 100%;
+	vertical-align: middle;
+}
+.child-m5{
+	width: 300px;
+	background-color: blue;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+/*method 6*/
+.parent-m6{
+	min-height: 200px;
+	background-color: grey;
+	border: 20px solid #ccc;
+	padding: 20px;
+	margin-bottom: 20px;
+	position: relative;
+}
+.child-m6{
+	position: absolute;
+    min-width: 300px;
+    min-height: 100px;
+    top: 50%;
+    left: 50%;
+    background-color: blue;
+    transform: translate(-50%, -50%);
+}
+
