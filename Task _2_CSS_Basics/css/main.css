@@ -1,80 +1,383 @@
 *{
-	box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	margin: 0;
-	padding: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
-.wrapper{
-	display: -webkit-box;
-	display: -moz-box;
-	display: -ms-flexbox;
-	display: -webkit-flex;
-	display: flex;  
+a{
+    text-decoration: none;
+}
+ul{
+    list-style-type: none;
+}
+.container{
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 0 2%;
+}
+#mainHeader, #mainNav, #mainNav ul, #mainHeader h1, header #header-account ul, #header-account, .wrapper, .menu-footer ul{
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+/*NAVIGATION FOR MOBILE*/
 
-	max-width: 1160px;
-	margin: 0 auto;
-	flex-flow: row wrap;
-	-webkit-flex-flow: row wrap;
+#mobileMenu{
+    display: none;
+    width: 85%;
+    border-right: 1px solid #bcbcbc;
+    height: 100%;
 }
-header, nav, footer{
-	flex: 1 100%;
+#mobileMenu form{
+    padding: 20px 25px 10px;
+}
+#mobileMenu input{
+    width: 100%;
+    height: 30px;
+}
+#mainPanel{
+    padding: 0 25px 20px 25px;
+    font-family: sans-serif;
+}
+#mainPanel a{
+    color: #333;
+    font-size: 16px;
+}
+#mainPanel .mobileNav li:first-child{
+    margin-bottom: 27px;
+    border-bottom: 1px solid #ccc;
+    height: 52px;
+    line-height: 52px;
+}
+#mainPanel .mobileNav li:nth-of-type(2){
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: serif;
+    margin-bottom: 10px;
+}
+#mainPanel .mobileNav li:nth-child(n+3):nth-child(-n+8){
+    height: 42px;
+    line-height:42px;
+    border-bottom: 1px solid #ccc;
+}
+.mobileShop{
+    padding: 10px 0px;
+    margin-top: 15px;
+}
+.mobileShop li{
+    margin-bottom: 15px;
+}
+.mobileSocilal{
+    padding: 10px 0px;
+}
+
+/*HEADER*/
+hr:before{
+    content: "";
+    height: 64px;
+    display: block;
+}
+.header-wrapper{
+    position: fixed;
+    padding: 0 7%;
+    background-color: #fff;
+    z-index: 1;
+    width: 100%;
+}
+header a:hover{
+    text-decoration: underline;
+    cursor: pointer;
 }
 header{
-	min-height: 15vh;
-	justify-content: space-between;
+    /*display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex; */
+
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+
+    min-height: 64px;
+    font-size: 14px;
+    font-family: "caslon";
+ }
+/*Main navigation*/
+
+.btn-flex{
+    background: 0;
+    border: 0;
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
 }
-header>div{
-	text-align: left;
-	background-color: #F9F9F9;
-	display: flex;
-	align-items: center;
-	flex-basis: 30%;
-}
-header h1{
-	margin: 0px 20px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-basis: 30%;
+.btn-flex span{
+    width: 30px;
+    height: 2px;
+    margin: 2px;
+    background: #333333;
 }
 #mainNav{
-	height: 15vh;
-	padding: 15px 0px; 
-	margin-bottom: 10px; 
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	background-color: #F4F4F4;
+    /*display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;*/
+
+    -webkit-align-items: center;
+    align-items: center;
+
+    font-weight: bold;
 }
-.sideNav, .shop, main{
-	min-height: 50vh;
+#mainNav ul{
+    /*display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex; */
 }
-.sideNav{
-	width: 150.8px;
-	margin: 20px 12px 0 0;
-	background-color: #EEEEEE;
-	display: flex;
-	align-items: center;
+#mainNav ul li:nth-child(n+2){
+    padding: 0 15px;
+}
+#mainNav ul li:first-child{
+    padding-right: 15px;
+}
+#mainNav ul li a{
+    color: #333333;
+    text-transform: uppercase;
+}
+#mainHeader h1{
+    /*display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex; */
+
+    -webkit-align-items: center;
+    align-items: center;
+
+    text-transform: uppercase;
+    color: #333333;
+    font-weight: normal;
+}
+header #header-account ul{
+    /*display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex; */
+
+    font-size: 14px;
+}
+header #header-account input{
+    height: 37px;
+    font-size: 12px;
+    padding: 0 30px 0 10px;
+}
+#header-account ul li a{
+    color:  #333333;
+}
+#header-account ul li:nth-child(-n+3){
+    padding: 0 10px;
+}
+#header-account ul li:last-child{
+    padding-left: 10px;
+}
+#header-account{
+   /* display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;*/
+
+    -webkit-align-items: center;
+    align-items: center;
+
+    font-family: 'Sree Krushnadevaraya', serif;
+}
+hr{
+    width: 100%;
+}
+
+.wrapper{
+    /*display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex; */
+
+    flex-flow: row wrap;
+    -webkit-flex-flow: row wrap;
+}
+
+#homeGo{
+    width: 100%;
+    margin-bottom: 10px;
+    font-size: 11px;
+    padding: 15px 0;
+    font-family: Arial, sans-serif;
+}
+#homeGo a{
+    color: #666666;
+}
+
+/*SIDE NAVIGATION*/
+
+#sideNav{
+    width: 13%;
+    margin: 20px 12px 0 0;
+}
+#sideNav h4{
+    font-size: 14px;
+    font-family: "caslon", serif;
+    text-transform: uppercase;
+    color: #333333;
+}
+#sideNav ul li{
+    font-family: "brandon", sans-serif;
+    font-size: 12px;
+    margin: 14px 0 5px;
+    text-transform: capitalize;
+}
+#sideNav ul li a{
+    color:  #666666;
+}
+#sideNav ul li a:hover{
+    color: #5160a6;
+}
+.cityGuide{
+    height: 342px;
+    overflow: hidden;
+}
+.cityGuide, .bestOf{
+    margin-bottom: 20px;
+}
+
+/*Right Side*/
+
+#shop{
+    width: 27%;
+    margin-top: 20px;
+    min-height: 300px;
+}
+.shop h3{
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.shop a{
+    color: #333333;
+}
+.shop a:hover{
+    color: #5160a6;
+}
+.shop button{
+    text-transform: uppercase;
+    padding: 8px 10px;
+    border: 1px solid #333333;
+    font-size: 11px;
+    background: 0;
+    display: block;
+    margin: 0 auto;
+    cursor: pointer;
+}
+.shop button:hover{
+    color: #5160a6;
 }
 .shop{
-	width: 302px;
-	background-color: #EEEEEE;
-	margin-top: 20px;
-	display: flex;
-	align-items: center;
+    border: 1px solid #cccccc;
+    padding: 25px 20px;
+    margin-bottom: 20px;
+    min-height: 300px;
 }
+
 main{
-	flex: 1 auto;
-	margin-right: 23px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	margin-top: -10px; 
+    flex-grow: 1;
+    margin: -10px 23px 0 0 ;
 }
 footer{
-	background-color: #DDDDDD;
-	display: flex;
-	justify-content: center;
-	padding: 48px 0 40px 0;
+    margin-top: 82px;
+    background-color: #333333;
+    padding: 48px 0 40px 0;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 10px;
+}
+footer a{
+    color: #ffffff;
+}
+.menu-footer{
+    padding: 30px 58px 0 58px;
+    border-top: 1px solid #666666;
+}
+.menu-footer ul{
+    /*display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex; */
+
+    -webkit-justify-content: center;
+    justify-content: center;
+
+    margin-bottom: 10px;
+}
+.menu-footer ul li:nth-child(-n+3){
+    padding: 0 10px;
+    border-right: 1px solid #ffffff;
+}
+.menu-footer ul li:last-child{
+    padding-left: 10px;
+}
+.menu-footer ul li a:hover{
+    color: #666666;
+}
+#footer-social{
+    min-height: 187px;
+    padding: 0 58px 30px 58px;
+}
+#copiright{
+    text-align: center;
+}
+
+/*For mobile*/
+@media (max-width: 768px){
+    #mainNav ul{
+        display: none;
+    }
+    .btn-flex{
+        visibility: visible;
+    }
+    #header-account ul li:nth-child(-n+3){
+        display: none;
+    }
+    .header-wrapper{
+        position: relative;
+    }
+
+
+    /*body{*/
+        /*display: flex;*/
+    /*}*/
+    /*.desktop{*/
+        /*width:15%;*/
+        /*overflow: hidden;*/
+    /*}*/
+
+    hr:before{
+        height: 0px;
+    }
+    
+    #sideNav, #homeGo{
+        display: none;
+    }
+    main{
+        width: 100%;
+     }
+    #shop{
+        width:100%;
+    }
 }
