@@ -24,12 +24,16 @@ ul{
     display: flex;
 }
 /*NAVIGATION FOR MOBILE*/
-
+#nav-trigger{
+    position: absolute;
+    opacity: 0;
+}
 #mobileMenu{
     display: none;
     width: 85%;
     border-right: 1px solid #bcbcbc;
     height: 100%;
+    position: absolute;
 }
 #mobileMenu form{
     padding: 20px 25px 10px;
@@ -342,9 +346,30 @@ footer a{
 #copiright{
     text-align: center;
 }
+/*FOR TABLET*/
+@media only screen and (max-width: 1024px){
+    header #header-account input{
+        display: none;
+    }
+    #mainNav ul li:nth-child(n+2){
+        padding: 0 10px;
+    }
+    #mainNav ul li:first-child{
+        padding-right: 10px;
+    }
+    #sideNav{
+        width: 30%;
+    }
+    main{
+        width: 70%;
+    }
+    #shop{
+        width:100%;
+    }
+}
 
-/*For mobile*/
-@media (max-width: 768px){
+/*FOR MOBILE*/
+@media only screen and (max-width: 768px){
     #mainNav ul{
         display: none;
     }
@@ -358,19 +383,28 @@ footer a{
         position: relative;
     }
 
-
-    /*body{*/
-        /*display: flex;*/
-    /*}*/
-    /*.desktop{*/
-        /*width:15%;*/
-        /*overflow: hidden;*/
-    /*}*/
-
+    label[for="nav-trigger"] {
+        width: 35px;
+        height: 35px;
+        position: fixed;
+        left: 6%;
+        top: 3%;
+        z-index: 5;
+        cursor: pointer;
+    }
+    .nav-trigger:checked + label{
+        left: 90%;
+    }
+    .nav-trigger:checked ~ .desktop{
+        padding-left: 90%;
+        overflow: hidden;
+    }
+    .nav-trigger:checked ~ #mobileMenu{
+        display: block;
+    }
     hr:before{
         height: 0px;
     }
-    
     #sideNav, #homeGo{
         display: none;
     }

@@ -2,7 +2,7 @@
 <html lang="en-US">
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.6">
         <meta name="description" content="all the latest Go posts from Goop">
         <title>Go | Goop</title>
         <link href="https://fonts.googleapis.com/css?family=Hind:300,400|Sree+Krushnadevaraya" rel="stylesheet">
@@ -10,6 +10,8 @@
         <link rel="stylesheet" type="text/css" href="css/main.css">
     </head>
     <body>
+        <input type="checkbox" id="nav-trigger" class="nav-trigger">
+        <label for="nav-trigger"></label>
         <nav id="mobileMenu">
             <form role="search">
                 <input type="search" name="search">
@@ -46,7 +48,7 @@
                             <li><a href="#">Make</a></li>
                             <li><a href="#">Get</a></li>
                         </ul>
-                        <button class="btn-flex" tabindex="1">
+                        <button class="btn-flex">
                             <span></span>
                             <span></span>
                             <span></span>
@@ -69,11 +71,11 @@
             </section>
             <hr>
             <section class="container wrapper left-aside">
-                    <nav id="homeGo">
+                <nav id="homeGo">
                         <a href="#">Home &#47 </a>&nbsp
                         <a href="#">Go</a>
                     </nav>
-                    <nav id="sideNav">
+                <nav id="sideNav">
                         <section class="cityGuide">
                             <h4>City Guides</h4>
                             <ul>
