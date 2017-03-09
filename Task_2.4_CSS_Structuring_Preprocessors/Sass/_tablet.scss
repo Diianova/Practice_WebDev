@@ -3,15 +3,17 @@
 \*------------------------------------*/
 
 @media only screen and (max-width: 1024px){
-  .header-account__input{
+  .form__input{
     display: none;
   }
-  .main-nav ul{
-    li:nth-child(n+2){
-      padding: 0 10px;
-    }
-    li:first-child{
-      padding-right: 10px;
+  .main-nav{
+    &__item {
+      li:nth-child(n+2) {
+        padding: 0 10px;
+      }
+      li:first-child {
+        padding-right: 10px;
+      }
     }
   }
   .side-nav{

@@ -9,18 +9,18 @@
   background-color: $footer-main;
 }
 
-.main-header{
+.main-header {
   @extend .flexBox;
   -webkit-justify-content: space-between;
   justify-content: space-between;
   min-height: 64px;
   font-size: 14px;
   font-family: $font-caslon;
-  a:hover{
+  a:hover {
     text-decoration: underline;
     cursor: pointer;
   }
-  h1{
+  &__h {
     @extend .flexBox;
     -webkit-align-items: center;
     align-items: center;
@@ -28,31 +28,32 @@
     color: $gray-base;
     font-weight: normal;
   }
-  .header-account{
+  &__header-account {
     @extend .flexBox;
     -webkit-align-items: center;
     align-items: center;
     font-family: $font-SKrushnadevaraya;
-    .header-account__ul{
-      @extend .flexBox;
-      font-size: 14px;
-      .header-account__li a{
-        color: $gray-base;
-      }
-      .header-account__li:nth-child(-n+3){
-        padding: 0 10px;
-      }
-    }
-    .header-account__input{
-      padding: 0 30px 0 10px;
-      height: 37px;
-      font-size: 12px;
-    }
-    .header-account__li:last-child{
-      padding-left: 10px;
-    }
   }
 }
+.panel {
+  @extend .flexBox;
+  font-size: 14px;
+  a {
+    color: $gray-base;
+  }
+  li:nth-child(-n+3){
+    padding: 0 10px;
+  }
+  input{
+    padding: 0 30px 0 10px;
+    height: 37px;
+    font-size: 12px;
+  }
+  li:last-child{
+    padding-left: 10px;
+  }
+}
+
 
 .btn-flex{
   background: 0;
@@ -73,7 +74,7 @@
   -webkit-align-items: center;
   align-items: center;
   font-weight: bold;
-  ul{
+  &__item{
     @extend .flexBox;
     li:nth-child(n+2){
       padding: 0 15px;
