@@ -1,0 +1,260 @@
+/*------------------------------------*\
+#HEADER
+\*------------------------------------*/
+.header-wrapper{
+  position: fixed;
+  z-index: 1;
+  padding: 0 7%;
+  width: 100%;
+  background-color: $footer-main;
+}
+
+.main-header{
+  @extend .flexBox;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  min-height: 64px;
+  font-size: 14px;
+  font-family: $font-caslon;
+  a:hover{
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  h1{
+    @extend .flexBox;
+    -webkit-align-items: center;
+    align-items: center;
+    text-transform: uppercase;
+    color: $gray-base;
+    font-weight: normal;
+  }
+  .header-account{
+    @extend .flexBox;
+    -webkit-align-items: center;
+    align-items: center;
+    font-family: $font-SKrushnadevaraya;
+    .header-account__ul{
+      @extend .flexBox;
+      font-size: 14px;
+      .header-account__li a{
+        color: $gray-base;
+      }
+      .header-account__li:nth-child(-n+3){
+        padding: 0 10px;
+      }
+    }
+    .header-account__input{
+      padding: 0 30px 0 10px;
+      height: 37px;
+      font-size: 12px;
+    }
+    .header-account__li:last-child{
+      padding-left: 10px;
+    }
+  }
+}
+
+.btn-flex{
+  background: 0;
+  border: 0;
+  visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  span{
+    width: 30px;
+    height: 2px;
+    margin: 2px;
+    background: $gray-base;
+  }
+}
+
+.main-nav{
+  @extend .flexBox;
+  -webkit-align-items: center;
+  align-items: center;
+  font-weight: bold;
+  ul{
+    @extend .flexBox;
+    li:nth-child(n+2){
+      padding: 0 15px;
+    }
+    li:first-child{
+      padding-right: 15px;
+    }
+    li a{
+      color: $gray-base;
+      text-transform: uppercase;
+    }
+  }
+}
+
+hr {
+  width: 100%;
+  &:before {
+    content: "";
+    height: 64px;
+    display: block;
+  }
+}
+
+.wrapper{
+  @extend .flexBox;
+  flex-flow: row wrap;
+  -webkit-flex-flow: row wrap;
+}
+.home-go{
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 15px 0;
+  font-size: 11px;
+  font-family: $font-arial;
+  a{
+    color: $gray-light;
+  }
+}
+
+
+
+
+
+
+/*------------------------------------*\
+#SIDE NAVIGATION
+\*------------------------------------*/
+
+.side-nav{
+  width: 13%;
+  margin: 20px 12px 0 0;
+  h4{
+    font-size: 14px;
+    font-family: $font-caslon;
+    text-transform: uppercase;
+    color: $gray-base;
+  }
+  ul {
+    li {
+      font-family: $font-brandon;
+      font-size: 12px;
+      margin: 14px 0 5px;
+      text-transform: capitalize;
+      a{
+        color: $gray-light;
+        &:hover{
+          color: #5160a6;
+        }
+      }
+    }
+  }
+}
+.city-guide{
+  height: 342px;
+  overflow: hidden;
+}
+.city-guide,
+.best-of{
+  margin-bottom: 20px;
+}
+
+
+
+
+
+/*------------------------------------*\
+#SHOP
+\*------------------------------------*/
+
+.shop{
+  width: 27%;
+  margin-top: 20px;
+  min-height: 300px;
+}
+.shop__container{
+  border: 1px solid #cccccc;
+  padding: 25px 20px;
+  margin-bottom: 20px;
+  min-height: 300px;
+  h3{
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  a{
+    color: $gray-base;
+    &:hover{
+      color: #5160a6;
+    }
+  }
+  .btn-go-shop{
+    text-transform: uppercase;
+    padding: 8px 10px;
+    border: 1px solid $gray-base;
+    font-size: 11px;
+    background: 0;
+    display: block;
+    margin: 0 auto;
+    cursor: pointer;
+    &:hover{
+      color: #5160a6;
+    }
+  }
+}
+
+
+
+
+
+/*------------------------------------*\
+#MAIN
+\*------------------------------------*/
+
+.main{
+  flex-grow: 1;
+  margin: -10px 23px 0 0 ;
+}
+
+
+
+
+
+/*------------------------------------*\
+#FOOTER
+\*------------------------------------*/
+
+.footer{
+  margin-top: 82px;
+  background-color: $gray-base;
+  padding: 48px 0 40px 0;
+  color: $footer-main;
+  text-transform: uppercase;
+  font-size: 10px;
+  a{
+    color: $footer-main;
+  }
+}
+.footer__menu{
+  padding: 30px 58px 0 58px;
+  border-top: 1px solid $gray-light;
+  ul{
+    @extend .flexBox;
+    -webkit-justify-content: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    li:nth-child(-n+3){
+      padding: 0 10px;
+      border-right: 1px solid $footer-main;
+    }
+    li:last-child{
+      padding-left: 10px;
+    }
+    li a:hover{
+      color: $gray-light;
+    }
+  }
+}
+.footer__social{
+  min-height: 187px;
+  padding: 0 58px 30px 58px;
+}
+.footer__copiright {
+  text-align: center;
+}

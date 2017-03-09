@@ -1,0 +1,26 @@
+/*------------------------------------*\
+#TABLET VERSION
+\*------------------------------------*/
+
+@media only screen and (max-width: 1024px){
+  .header-account__input{
+    display: none;
+  }
+  .main-nav ul{
+    li:nth-child(n+2){
+      padding: 0 10px;
+    }
+    li:first-child{
+      padding-right: 10px;
+    }
+  }
+  .side-nav{
+    width: 30%;
+  }
+  .main{
+    width: 70%;
+  }
+  .shop{
+    width:100%;
+  }
+}
